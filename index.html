@@ -1,0 +1,537 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description" content="Portafolio profesional de Yari Idarraga, estudiante de Administración Tecnológica del ITM.">
+
+    <title>Yari Idarraga | Portafolio Profesional</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Segoe UI', Arial, sans-serif;
+            background: #f4f5ed;
+            color: #30382b;
+            line-height: 1.7;
+        }
+
+        /* ENCABEZADO */
+        header {
+            background: #556344;
+            color: white;
+            padding: 20px 8%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        header h2 {
+            color: #e5d29b;
+            font-size: 23px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin-left: 18px;
+            font-size: 14px;
+        }
+
+        nav a:hover {
+            color: #e5d29b;
+        }
+
+        /* PRESENTACIÓN */
+        .hero {
+            min-height: 440px;
+            background: linear-gradient(120deg, #46543a, #78865e);
+            color: white;
+            display: flex;
+            align-items: center;
+            padding: 70px 10%;
+        }
+
+        .hero-content {
+            max-width: 750px;
+        }
+
+        .hero h1 {
+            font-size: 48px;
+            margin-bottom: 10px;
+        }
+
+        .hero h3 {
+            color: #e5d29b;
+            font-size: 23px;
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            font-size: 17px;
+            max-width: 650px;
+            color: #f0f1e9;
+        }
+
+        /* BOTONES */
+        .btn {
+            display: inline-block;
+            margin-top: 25px;
+            padding: 12px 25px;
+            background: #d9c58b;
+            color: #35412d;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: bold;
+            border: none;
+            cursor: pointer;
+            font-size: 15px;
+        }
+
+        .btn:hover {
+            background: #c7b273;
+        }
+
+        .download-section {
+            text-align: center;
+            padding: 30px 10%;
+            background: #e9ecdf;
+        }
+
+        .download-btn {
+            background: #556344;
+            color: white;
+            margin-top: 10px;
+        }
+
+        .download-btn:hover {
+            background: #35412d;
+        }
+
+        /* SECCIONES */
+        section {
+            padding: 65px 10%;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 29px;
+            color: #46543a;
+            margin-bottom: 35px;
+        }
+
+        /* PERFIL */
+        .about {
+            background: #ffffff;
+        }
+
+        .about-content {
+            max-width: 950px;
+            margin: auto;
+            text-align: justify;
+            font-size: 17px;
+            color: #50594a;
+        }
+
+        .about-content p {
+            margin-bottom: 18px;
+        }
+
+        /* TARJETAS */
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+            gap: 25px;
+        }
+
+        .card {
+            background: white;
+            padding: 28px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.06);
+            border-top: 4px solid #89966a;
+            break-inside: avoid;
+        }
+
+        .card h3 {
+            color: #46543a;
+            margin-bottom: 12px;
+        }
+
+        .card p {
+            color: #5c6878;
+        }
+
+        /* CONTACTO */
+        .contact {
+            background: #556344;
+            color: white;
+            text-align: center;
+        }
+
+        .contact .section-title {
+            color: white;
+        }
+
+        .contact a {
+            color: #e5d29b;
+            text-decoration: none;
+        }
+
+        /* PIE DE PÁGINA */
+        footer {
+            background: #35412d;
+            color: #dce1d4;
+            text-align: center;
+            padding: 20px;
+            font-size: 13px;
+        }
+
+        /* CELULARES */
+        @media (max-width: 650px) {
+
+            header {
+                justify-content: center;
+                gap: 15px;
+            }
+
+            nav {
+                text-align: center;
+            }
+
+            nav a {
+                display: inline-block;
+                margin: 5px;
+            }
+
+            .hero h1 {
+                font-size: 35px;
+            }
+
+            .hero h3 {
+                font-size: 19px;
+            }
+
+            section {
+                padding: 45px 7%;
+            }
+        }
+
+        /* CONFIGURACIÓN PARA PDF */
+        @media print {
+
+            body {
+                background: white;
+                color: #30382b;
+                -webkit-print-color-adjust: exact;
+                print-color-adjust: exact;
+            }
+
+            header {
+                padding: 15px 5%;
+            }
+
+            nav {
+                display: none;
+            }
+
+            .download-section,
+            .btn {
+                display: none !important;
+            }
+
+            .hero {
+                min-height: 280px;
+                padding: 45px 8%;
+                break-inside: avoid;
+            }
+
+            section {
+                padding: 35px 8%;
+            }
+
+            .card {
+                box-shadow: none;
+                border: 1px solid #dce1d4;
+                border-top: 4px solid #89966a;
+            }
+
+            .cards {
+                gap: 15px;
+            }
+
+            a {
+                text-decoration: none;
+            }
+
+            footer {
+                break-inside: avoid;
+            }
+
+            @page {
+                size: A4;
+                margin: 12mm;
+            }
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <!-- ENCABEZADO -->
+    <header>
+
+        <h2>YARI IDARRAGA</h2>
+
+        <nav>
+            <a href="#inicio">Inicio</a>
+            <a href="#perfil">Mi perfil</a>
+            <a href="#formacion">Formación</a>
+            <a href="#experiencia">Experiencia</a>
+            <a href="#competencias">Competencias</a>
+            <a href="#contacto">Contacto</a>
+        </nav>
+
+    </header>
+
+    <!-- PRESENTACIÓN -->
+    <section class="hero" id="inicio">
+
+        <div class="hero-content">
+
+            <h1>Hola, soy Yari Idarraga</h1>
+
+            <h3>Administradora Tecnológica</h3>
+
+            <p>
+                Estudiante de séptimo semestre de Administración
+                Tecnológica en la Institución Universitaria ITM.
+                Cuento con experiencia en procesos administrativos
+                y contables, y una formación orientada a la gestión
+                empresarial, la tecnología y la innovación.
+            </p>
+
+            <a href="#perfil" class="btn">
+                Conoce más sobre mí
+            </a>
+
+        </div>
+
+    </section>
+
+    <!-- BOTÓN DESCARGAR PDF -->
+    <div class="download-section">
+
+        <h2>Mi portafolio profesional</h2>
+
+        <p>
+            Descarga una versión PDF de mi portafolio
+            para consultar o compartir mi perfil profesional.
+        </p>
+
+        <button
+            class="btn download-btn"
+            onclick="descargarPDF()">
+
+            &#128190; Descargar portafolio en PDF
+
+        </button>
+
+    </div>
+
+    <!-- PERFIL PROFESIONAL -->
+    <section class="about" id="perfil">
+
+        <h2 class="section-title">Perfil Profesional</h2>
+
+        <div class="about-content">
+
+            <p>
+                Es un ciudadano global que cuenta con formación
+                integral, con cualidades éticas y de autonomía para
+                su desarrollo profesional, con capacidad para
+                planear, organizar, dirigir, controlar y evaluar
+                los procesos de gestión del conocimiento, tecnología
+                e innovación, alineándolos con la estrategia para
+                el logro de los objetivos de las organizaciones en
+                las que interviene, lo cual le permite tomar
+                decisiones en contextos complejos, dinámicos e
+                inciertos.
+            </p>
+
+            <p>
+                Soy estudiante de séptimo semestre de Administración
+                Tecnológica en la Institución Universitaria ITM,
+                con experiencia como Auxiliar Administrativa y
+                Contable. Me interesa fortalecer mis conocimientos
+                y aportar al mejoramiento de los procesos
+                organizacionales.
+            </p>
+
+        </div>
+
+    </section>
+
+    <!-- FORMACIÓN ACADÉMICA -->
+    <section id="formacion">
+
+        <h2 class="section-title">Formación Académica</h2>
+
+        <div class="cards">
+
+            <div class="card">
+
+                <h3>Administración Tecnológica</h3>
+
+                <p>Institución Universitaria ITM</p>
+
+                <p>Séptimo semestre</p>
+
+                <p>Actualmente en formación académica.</p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- EXPERIENCIA LABORAL -->
+    <section class="about" id="experiencia">
+
+        <h2 class="section-title">Experiencia Laboral</h2>
+
+        <div class="cards">
+
+            <div class="card">
+
+                <h3>Auxiliar Administrativa</h3>
+
+                <p>
+                    Experiencia en apoyo a procesos administrativos,
+                    gestión documental, organización de información
+                    y actividades de soporte empresarial.
+                </p>
+
+            </div>
+
+            <div class="card">
+
+                <h3>Auxiliar Contable</h3>
+
+                <p>
+                    Experiencia en apoyo a procesos contables,
+                    gestión de documentos, revisión de información
+                    y actividades de apoyo financiero.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- COMPETENCIAS -->
+    <section id="competencias">
+
+        <h2 class="section-title">Competencias Profesionales</h2>
+
+        <div class="cards">
+
+            <div class="card">
+
+                <h3>Gestión Administrativa</h3>
+
+                <p>
+                    Apoyo y organización de procesos empresariales.
+                </p>
+
+            </div>
+
+            <div class="card">
+
+                <h3>Gestión Contable</h3>
+
+                <p>
+                    Apoyo en actividades y documentación contable.
+                </p>
+
+            </div>
+
+            <div class="card">
+
+                <h3>Gestión Tecnológica</h3>
+
+                <p>
+                    Interés en la tecnología y el mejoramiento
+                    de procesos organizacionales.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- CONTACTO -->
+    <section class="contact" id="contacto">
+
+        <h2 class="section-title">Contacto</h2>
+
+        <p>
+            ¿Te gustaría conocer más sobre mi perfil profesional?
+        </p>
+
+        <p style="margin-top: 15px;">
+
+            Correo electrónico:
+
+            <a href="mailto:yarihidalgo4@gmail.com">
+                yarihidalgo4@gmail.com
+            </a>
+
+        </p>
+
+        <a class="btn" href="mailto:yarihidalgo4@gmail.com">
+            Enviar un correo
+        </a>
+
+    </section>
+
+    <!-- PIE DE PÁGINA -->
+    <footer>
+
+        <p>
+            © 2026 Yari Idarraga | Portafolio Profesional
+        </p>
+
+        <p>
+            Administración Tecnológica - ITM
+        </p>
+
+    </footer>
+
+    <!-- FUNCIÓN PARA GENERAR PDF -->
+    <script>
+
+        function descargarPDF() {
+
+            document.title = "Portafolio_Profesional_Yari_Idarraga";
+
+            window.print();
+
+        }
+
+    </script>
+
+</body>
+</html>
