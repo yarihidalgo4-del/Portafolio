@@ -45,13 +45,13 @@
       position: sticky;
       top: 0;
       z-index: 100;
-      box-shadow: 0 3px 12px rgba(20, 45, 78, 0.15);
+      box-shadow: 0 3px 12px rgba(20,45,78,.15);
     }
 
     .logo {
       font-size: 19px;
       font-weight: 700;
-      letter-spacing: 0.4px;
+      letter-spacing: .4px;
     }
 
     nav {
@@ -64,7 +64,7 @@
       color: white;
       text-decoration: none;
       font-size: 14px;
-      transition: color 0.3s;
+      transition: color .3s;
     }
 
     nav a:hover {
@@ -72,7 +72,7 @@
     }
 
     .hero {
-      background: linear-gradient(130deg, var(--azul), var(--azul-claro));
+      background: linear-gradient(130deg,var(--azul),var(--azul-claro));
       color: white;
       padding: 65px 7%;
     }
@@ -92,7 +92,7 @@
     }
 
     .hero h1 {
-      font-size: clamp(30px, 5vw, 46px);
+      font-size: clamp(30px,5vw,46px);
       margin-bottom: 12px;
       line-height: 1.2;
     }
@@ -123,8 +123,8 @@
       object-fit: cover;
       object-position: center 25%;
       border-radius: 18px;
-      border: 5px solid rgba(255,255,255,0.85);
-      box-shadow: 0 12px 30px rgba(0,0,0,0.25);
+      border: 5px solid rgba(255,255,255,.85);
+      box-shadow: 0 12px 30px rgba(0,0,0,.25);
     }
 
     .hero-buttons {
@@ -143,7 +143,7 @@
       text-decoration: none;
       font-weight: 600;
       border: 2px solid var(--verde);
-      transition: 0.3s;
+      transition: .3s;
       cursor: pointer;
       font-size: 14px;
     }
@@ -200,7 +200,7 @@
       padding: 30px;
       border-radius: 12px;
       border-left: 5px solid var(--verde);
-      box-shadow: 0 4px 15px rgba(20, 45, 78, 0.06);
+      box-shadow: 0 4px 15px rgba(20,45,78,.06);
       text-align: justify;
     }
 
@@ -214,7 +214,7 @@
 
     .cards {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
       gap: 22px;
     }
 
@@ -224,13 +224,13 @@
       border-radius: 12px;
       border: 1px solid var(--borde);
       border-top: 4px solid var(--verde);
-      box-shadow: 0 4px 14px rgba(20, 45, 78, 0.05);
-      transition: transform 0.3s, box-shadow 0.3s;
+      box-shadow: 0 4px 14px rgba(20,45,78,.05);
+      transition: transform .3s,box-shadow .3s;
     }
 
     .card:hover {
       transform: translateY(-5px);
-      box-shadow: 0 9px 22px rgba(20, 45, 78, 0.10);
+      box-shadow: 0 9px 22px rgba(20,45,78,.10);
     }
 
     .card h3 {
@@ -265,7 +265,7 @@
       border-radius: 12px;
       border-left: 5px solid var(--verde);
       margin-bottom: 22px;
-      box-shadow: 0 4px 14px rgba(20, 45, 78, 0.05);
+      box-shadow: 0 4px 14px rgba(20,45,78,.05);
     }
 
     .experience-item h3 {
@@ -323,7 +323,7 @@
       color: white;
       text-decoration: none;
       font-weight: 600;
-      transition: 0.3s;
+      transition: .3s;
     }
 
     .social-btn:hover {
@@ -349,7 +349,7 @@
       font-size: 13px;
     }
 
-    @media (max-width: 800px) {
+    @media(max-width:800px) {
       .hero-content {
         flex-direction: column-reverse;
         gap: 30px;
@@ -374,7 +374,7 @@
       }
     }
 
-    @media (max-width: 700px) {
+    @media(max-width:700px) {
       header {
         justify-content: center;
         text-align: center;
@@ -467,9 +467,11 @@
 
   <div class="hero">
     <div class="hero-content">
+
       <div class="hero-text">
         <h1>Yari Mileidy Idárraga Hidalgo</h1>
         <h2>Administración Tecnológica</h2>
+
         <p>
           Estudiante de Administración Tecnológica, Tecnóloga en Análisis de
           Costos y Presupuestos y Técnica Laboral en Gestión Humana.
@@ -479,7 +481,9 @@
 
         <div class="hero-buttons">
           <a href="#contacto" class="btn">Contáctame</a>
-          <a href="#experiencia" class="btn btn-outline">Conoce mi experiencia</a>
+          <a href="#experiencia" class="btn btn-outline">
+            Conoce mi experiencia
+          </a>
         </div>
       </div>
 
@@ -487,9 +491,9 @@
         <img
           src="foto-perfil.jpeg"
           alt="Fotografía profesional de Yari Mileidy Idárraga Hidalgo"
-          class="profile-photo"
-        >
+          class="profile-photo">
       </div>
+
     </div>
   </div>
 
@@ -501,7 +505,9 @@
 
   <section id="perfil">
     <h2 class="section-title">Perfil Profesional</h2>
+
     <div class="profile-text">
+
       <p>
         Soy estudiante de séptimo semestre de
         <strong>Administración Tecnológica en la Institución Universitaria ITM</strong>,
@@ -511,6 +517,7 @@
         apoyando diferentes procesos administrativos, contables, financieros
         y organizacionales.
       </p>
+
       <p>
         Me caracterizo por ser una persona responsable, organizada, autónoma
         y comprometida con el aprendizaje continuo. Cuento con conocimientos
@@ -519,6 +526,7 @@
         humanos y financieros, contribuyendo al cumplimiento de los objetivos
         empresariales.
       </p>
+
       <p>
         Mi formación académica y experiencia laboral me permiten tener una
         visión integral de las organizaciones, con conocimientos en gestión
@@ -528,17 +536,21 @@
         herramientas para optimizar procesos y fortalecer la competitividad
         empresarial.
       </p>
+
       <p>
         Busco continuar fortaleciendo mis competencias profesionales, aportar
         soluciones y contribuir al mejoramiento continuo y desarrollo
         estratégico de las organizaciones.
       </p>
+
     </div>
   </section>
 
   <section id="formacion">
     <h2 class="section-title">Formación Académica</h2>
+
     <div class="cards">
+
       <div class="card">
         <h3>Administración Tecnológica</h3>
         <p><strong>Universidad:</strong> Institución Universitaria ITM</p>
@@ -549,7 +561,9 @@
       <div class="card">
         <h3>Análisis de Costos y Presupuestos</h3>
         <p><strong>Institución:</strong> Institución Universitaria ITM</p>
-        <p><strong>Título:</strong> Tecnóloga en Análisis de Costos y Presupuestos.</p>
+        <p>
+          <strong>Título:</strong> Tecnóloga en Análisis de Costos y Presupuestos.
+        </p>
       </div>
 
       <div class="card">
@@ -557,6 +571,7 @@
         <p><strong>Institución:</strong> Politécnico Mayor</p>
         <p><strong>Título:</strong> Técnica Laboral en Gestión Humana.</p>
       </div>
+
     </div>
   </section>
 
@@ -567,6 +582,7 @@
       <h3>C+H CORDELES Y HERRAMIENTAS</h3>
       <h4>Auxiliar Administrativa y Contable</h4>
       <div class="date">Medellín | Enero 2023 – Actualmente</div>
+
       <p>
         Apoyo en procesos administrativos y contables, registro de
         transacciones, facturación, gestión de cartera, compras, manejo de
@@ -579,40 +595,55 @@
       <h3>LEGAL SHAPERS</h3>
       <h4>Auxiliar Administrativa</h4>
       <div class="date">Medellín | Marzo 2021 – Julio 2022</div>
+
       <p>
         Soporte y capacitación en plataformas, trámites ante Cámara de
         Comercio, manejo de personal y seguimiento a proyectos administrativos
         y operativos.
       </p>
     </div>
+
   </section>
 
   <section id="certificados">
     <h2 class="section-title">Certificados y Cursos Cortos</h2>
+
     <div class="cards">
+
       <div class="card">
         <h3>Diplomado en Gestión Humana</h3>
         <p><strong>Institución:</strong> Politécnico de Colombia</p>
-        <p>Formación complementaria en procesos relacionados con la gestión del talento humano.</p>
+        <p>
+          Formación complementaria en procesos relacionados con la gestión
+          del talento humano.
+        </p>
       </div>
 
       <div class="card">
         <h3>Diplomado en Contratación Laboral</h3>
         <p><strong>Institución:</strong> Politécnico de Colombia</p>
-        <p>Formación complementaria en contratación y procesos laborales.</p>
+        <p>
+          Formación complementaria en contratación y procesos laborales.
+        </p>
       </div>
 
       <div class="card">
         <h3>Diplomado en Gestión Documental de Archivos</h3>
         <p><strong>Institución:</strong> Politécnico de Colombia</p>
-        <p>Formación complementaria en organización, administración y gestión documental.</p>
+        <p>
+          Formación complementaria en organización, administración y
+          gestión documental.
+        </p>
       </div>
+
     </div>
   </section>
 
   <section id="conocimientos">
     <h2 class="section-title">Otros Conocimientos y Competencias</h2>
+
     <div class="cards">
+
       <div class="card">
         <h3>Administración de Personal</h3>
         <ul>
@@ -644,18 +675,29 @@
         <h3>Competencias Digitales y Manejo de Software</h3>
         <ul>
           <li>Herramientas ofimáticas: Microsoft Office.</li>
-          <li>Plataformas administrativas, contables y empresariales: Alegra, World Office y Siigo.</li>
-          <li>Organización y gestión de procesos: Trello, Notion y Bitrix24.</li>
+          <li>
+            Plataformas administrativas, contables y empresariales:
+            Alegra, World Office y Siigo.
+          </li>
+          <li>
+            Organización y gestión de procesos: Trello, Notion y Bitrix24.
+          </li>
           <li>Sistemas de nómina: Nominapp.</li>
-          <li>Operadores de información para liquidación y pago de seguridad social: Enlace Operativo, SOI y Aportes en Línea.</li>
+          <li>
+            Operadores de información para liquidación y pago de seguridad
+            social: Enlace Operativo, SOI y Aportes en Línea.
+          </li>
         </ul>
       </div>
+
     </div>
   </section>
 
   <section id="proyectos">
     <h2 class="section-title">Proyectos</h2>
+
     <div class="cards">
+
       <div class="card">
         <h3>Proyectos Pasados</h3>
         <p><strong>Experiencia en procesos administrativos y gestión humana</strong></p>
@@ -688,6 +730,7 @@
           mediante herramientas digitales e innovación.
         </p>
       </div>
+
     </div>
   </section>
 
@@ -696,7 +739,11 @@
 
     <p>
       <strong>Correo electrónico:</strong>
-      <a href="mailto:yarihidalgo4@gmail.com?subject=Contacto%20desde%20mi%20portafolio">
+
+      <a
+        href="https://mail.google.com/mail/?view=cm&fs=1&to=yarihidalgo4@gmail.com&su=Contacto%20desde%20mi%20portafolio"
+        target="_blank"
+        rel="noopener noreferrer">
         yarihidalgo4@gmail.com
       </a>
     </p>
@@ -706,34 +753,44 @@
       <a href="tel:+573046530275">304 653 0275</a>
     </p>
 
-    <p><strong>Ubicación:</strong> Medellín, Colombia</p>
+    <p>
+      <strong>Ubicación:</strong> Medellín, Colombia
+    </p>
 
     <div class="social-buttons">
-      <a class="social-btn"
-         href="https://wa.me/573046530275"
-         target="_blank"
-         rel="noopener noreferrer">
+
+      <a
+        class="social-btn"
+        href="https://wa.me/573046530275"
+        target="_blank"
+        rel="noopener noreferrer">
         WhatsApp
       </a>
 
-      <a class="social-btn secondary"
-         href="mailto:yarihidalgo4@gmail.com?subject=Contacto%20desde%20mi%20portafolio">
+      <a
+        class="social-btn secondary"
+        href="https://mail.google.com/mail/?view=cm&fs=1&to=yarihidalgo4@gmail.com&su=Contacto%20desde%20mi%20portafolio"
+        target="_blank"
+        rel="noopener noreferrer">
         Correo electrónico
       </a>
 
-      <a class="social-btn secondary"
-         href="https://www.instagram.com/yari_ida?jplx=MWV6YnNqOWRld3o0bA=="
-         target="_blank"
-         rel="noopener noreferrer">
+      <a
+        class="social-btn secondary"
+        href="https://www.instagram.com/yari_id?jplx=MWV6YnNqOWRld3o0bA=="
+        target="_blank"
+        rel="noopener noreferrer">
         Instagram
       </a>
 
-      <a class="social-btn secondary"
-         href="https://www.facebook.com/share/1WDNqw51Gh/"
-         target="_blank"
-         rel="noopener noreferrer">
+      <a
+        class="social-btn secondary"
+        href="https://www.facebook.com/share/1WDNqw51Gh/"
+        target="_blank"
+        rel="noopener noreferrer">
         Facebook
       </a>
+
     </div>
   </section>
 
