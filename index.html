@@ -2,557 +2,762 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Portafolio profesional de Yari Mileidy Idárraga Hidalgo.">
+  <title>Portafolio Profesional | Yari Mileidy Idárraga Hidalgo</title>
 
-    <meta name="description" content="Portafolio profesional de Yari Mileidy Idárraga Hidalgo, estudiante de Administración Tecnológica del ITM.">
+  <style>
+    :root {
+      --perla: #f2f4f5;
+      --perla-card: #ffffff;
+      --azul: #142d4e;
+      --azul-claro: #29496b;
+      --verde: #15966b;
+      --verde-oscuro: #107653;
+      --texto: #344054;
+      --borde: #dce2e7;
+    }
 
-    <title>Yari Mileidy Idárraga Hidalgo | Portafolio Profesional</title>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+    }
 
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            scroll-behavior: smooth;
-        }
+    body {
+      font-family: "Segoe UI", Arial, sans-serif;
+      background: var(--perla);
+      color: var(--texto);
+      line-height: 1.7;
+    }
 
-        body {
-            font-family: 'Segoe UI', Arial, sans-serif;
-            background: #e5f5ff;
-            color: #263b50;
-            line-height: 1.7;
-        }
+    header {
+      background: var(--azul);
+      color: white;
+      padding: 18px 7%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 15px;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      box-shadow: 0 3px 12px rgba(20, 45, 78, 0.15);
+    }
 
-        /* ENCABEZADO */
-        header {
-            background: #2476a5;
-            color: white;
-            padding: 20px 8%;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            flex-wrap: wrap;
-        }
+    .logo {
+      font-size: 19px;
+      font-weight: 700;
+      letter-spacing: 0.4px;
+    }
 
-        header h2 {
-            color: #d9f1ff;
-            font-size: 21px;
-        }
+    nav {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 18px;
+    }
 
-        nav a {
-            color: white;
-            text-decoration: none;
-            margin-left: 15px;
-            font-size: 14px;
-        }
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-size: 14px;
+      transition: color 0.3s;
+    }
 
-        nav a:hover {
-            color: #bce8ff;
-        }
+    nav a:hover {
+      color: #55d6a6;
+    }
 
-        /* PRESENTACIÓN */
-        .hero {
-            min-height: 440px;
-            background: linear-gradient(120deg, #1676ae, #75c9ed);
-            color: white;
-            display: flex;
-            align-items: center;
-            padding: 70px 10%;
-        }
+    .hero {
+      background: linear-gradient(130deg, var(--azul), var(--azul-claro));
+      color: white;
+      padding: 65px 7%;
+    }
 
-        .hero-content {
-            max-width: 750px;
-        }
+    .hero-content {
+      max-width: 1100px;
+      margin: auto;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 55px;
+    }
 
-        .hero h1 {
-            font-size: 43px;
-            margin-bottom: 10px;
-        }
+    .hero-text {
+      flex: 1;
+      text-align: left;
+    }
 
-        .hero h3 {
-            color: #e1f5ff;
-            font-size: 23px;
-            margin-bottom: 20px;
-        }
+    .hero h1 {
+      font-size: clamp(30px, 5vw, 46px);
+      margin-bottom: 12px;
+      line-height: 1.2;
+    }
 
-        .hero p {
-            font-size: 17px;
-            max-width: 650px;
-            color: #f4fbff;
-        }
+    .hero h2 {
+      color: #72dfb5;
+      font-size: 21px;
+      font-weight: 500;
+      margin-bottom: 18px;
+    }
 
-        /* BOTONES */
-        .btn {
-            display: inline-block;
-            margin-top: 25px;
-            padding: 12px 25px;
-            background: #d9f1ff;
-            color: #155b83;
-            border-radius: 6px;
-            text-decoration: none;
-            font-weight: bold;
-            border: none;
-            cursor: pointer;
-            font-size: 15px;
-        }
+    .hero p {
+      font-size: 16px;
+      color: #e7edf4;
+      max-width: 650px;
+    }
 
-        .btn:hover {
-            background: #ffffff;
-        }
+    .profile-photo-container {
+      flex: 0 0 310px;
+      display: flex;
+      justify-content: center;
+    }
 
-        .download-section {
-            text-align: center;
-            padding: 30px 10%;
-            background: #ccecff;
-        }
+    .profile-photo {
+      width: 100%;
+      max-width: 310px;
+      height: 390px;
+      object-fit: cover;
+      object-position: center 25%;
+      border-radius: 18px;
+      border: 5px solid rgba(255,255,255,0.85);
+      box-shadow: 0 12px 30px rgba(0,0,0,0.25);
+    }
 
-        .download-section h2 {
-            color: #155b83;
-        }
+    .hero-buttons {
+      margin-top: 25px;
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
 
-        .download-btn {
-            background: #2476a5;
-            color: white;
-            margin-top: 10px;
-        }
+    .btn {
+      display: inline-block;
+      padding: 11px 22px;
+      border-radius: 7px;
+      background: var(--verde);
+      color: white;
+      text-decoration: none;
+      font-weight: 600;
+      border: 2px solid var(--verde);
+      transition: 0.3s;
+      cursor: pointer;
+      font-size: 14px;
+    }
 
-        .download-btn:hover {
-            background: #155b83;
-        }
+    .btn:hover {
+      background: var(--verde-oscuro);
+      border-color: var(--verde-oscuro);
+      transform: translateY(-2px);
+    }
 
-        /* SECCIONES */
-        section {
-            padding: 65px 10%;
-        }
+    .btn-outline {
+      background: transparent;
+      border-color: white;
+      color: white;
+    }
 
-        .section-title {
-            text-align: center;
-            font-size: 29px;
-            color: #155b83;
-            margin-bottom: 35px;
-        }
+    .btn-outline:hover {
+      background: white;
+      color: var(--azul);
+      border-color: white;
+    }
 
-        /* PERFIL */
-        .about {
-            background: #ffffff;
-        }
+    .download-area {
+      text-align: center;
+      padding: 25px 15px 5px;
+    }
 
-        .about-content {
-            max-width: 950px;
-            margin: auto;
-            text-align: justify;
-            font-size: 17px;
-            color: #45596c;
-        }
+    section {
+      padding: 65px 8%;
+      max-width: 1250px;
+      margin: auto;
+    }
 
-        .about-content p {
-            margin-bottom: 18px;
-        }
+    .section-title {
+      text-align: center;
+      color: var(--azul);
+      font-size: 29px;
+      margin-bottom: 35px;
+      position: relative;
+    }
 
-        /* TARJETAS */
-        .cards {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
-            gap: 25px;
-        }
+    .section-title::after {
+      content: "";
+      display: block;
+      width: 65px;
+      height: 4px;
+      background: var(--verde);
+      margin: 10px auto 0;
+      border-radius: 5px;
+    }
 
-        .card {
-            background: white;
-            padding: 28px;
-            border-radius: 12px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.06);
-            border-top: 4px solid #65bce5;
-            break-inside: avoid;
-        }
+    .profile-text {
+      background: var(--perla-card);
+      padding: 30px;
+      border-radius: 12px;
+      border-left: 5px solid var(--verde);
+      box-shadow: 0 4px 15px rgba(20, 45, 78, 0.06);
+      text-align: justify;
+    }
 
-        .card h3 {
-            color: #155b83;
-            margin-bottom: 12px;
-        }
+    .profile-text p {
+      margin-bottom: 16px;
+    }
 
-        .card p {
-            color: #5c6878;
-        }
+    .profile-text p:last-child {
+      margin-bottom: 0;
+    }
 
-        /* CONTACTO */
-        .contact {
-            background: #2476a5;
-            color: white;
-            text-align: center;
-        }
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 22px;
+    }
 
-        .contact .section-title {
-            color: white;
-        }
+    .card {
+      background: var(--perla-card);
+      padding: 25px;
+      border-radius: 12px;
+      border: 1px solid var(--borde);
+      border-top: 4px solid var(--verde);
+      box-shadow: 0 4px 14px rgba(20, 45, 78, 0.05);
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
 
-        .contact a {
-            color: #d9f1ff;
-            text-decoration: none;
-        }
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 9px 22px rgba(20, 45, 78, 0.10);
+    }
 
-        .contact-info {
-            margin-top: 15px;
-            font-size: 17px;
-        }
+    .card h3 {
+      color: var(--azul);
+      margin-bottom: 10px;
+      font-size: 19px;
+    }
 
-        /* PIE DE PÁGINA */
-        footer {
-            background: #155b83;
-            color: #e2f4ff;
-            text-align: center;
-            padding: 20px;
-            font-size: 13px;
-        }
+    .card p {
+      margin-bottom: 8px;
+    }
 
-        /* CELULARES */
-        @media (max-width: 650px) {
+    .card ul {
+      padding-left: 20px;
+      margin-top: 10px;
+    }
 
-            header {
-                justify-content: center;
-                gap: 15px;
-                text-align: center;
-            }
+    .card li {
+      margin-bottom: 7px;
+    }
 
-            nav {
-                text-align: center;
-            }
+    .date {
+      color: var(--verde-oscuro);
+      font-weight: 600;
+      font-size: 14px;
+      margin-bottom: 10px;
+    }
 
-            nav a {
-                display: inline-block;
-                margin: 5px;
-            }
+    .experience-item {
+      background: var(--perla-card);
+      padding: 27px;
+      border-radius: 12px;
+      border-left: 5px solid var(--verde);
+      margin-bottom: 22px;
+      box-shadow: 0 4px 14px rgba(20, 45, 78, 0.05);
+    }
 
-            .hero h1 {
-                font-size: 32px;
-            }
+    .experience-item h3 {
+      color: var(--azul);
+      font-size: 21px;
+    }
 
-            .hero h3 {
-                font-size: 19px;
-            }
+    .experience-item h4 {
+      color: var(--verde-oscuro);
+      margin: 5px 0;
+    }
 
-            section {
-                padding: 45px 7%;
-            }
-        }
+    .experience-item p {
+      margin-top: 8px;
+    }
 
-        /* CONFIGURACIÓN PARA PDF */
-        @media print {
+    .contact-section {
+      background: var(--azul);
+      color: white;
+      max-width: none;
+      text-align: center;
+      padding: 65px 8%;
+    }
 
-            body {
-                background: white;
-                color: #263b50;
-                -webkit-print-color-adjust: exact;
-                print-color-adjust: exact;
-            }
+    .contact-section .section-title {
+      color: white;
+    }
 
-            header {
-                padding: 15px 5%;
-            }
+    .contact-section p {
+      margin: 10px 0;
+      color: #e7edf4;
+    }
 
-            nav {
-                display: none;
-            }
+    .contact-section a:not(.social-btn) {
+      color: #79e2b8;
+      text-decoration: none;
+    }
 
-            .download-section,
-            .btn {
-                display: none !important;
-            }
+    .social-buttons {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 13px;
+      margin-top: 25px;
+    }
 
-            .hero {
-                min-height: 280px;
-                padding: 45px 8%;
-                break-inside: avoid;
-            }
+    .social-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-width: 135px;
+      padding: 12px 18px;
+      border-radius: 7px;
+      background: var(--verde);
+      color: white;
+      text-decoration: none;
+      font-weight: 600;
+      transition: 0.3s;
+    }
 
-            section {
-                padding: 35px 8%;
-            }
+    .social-btn:hover {
+      background: var(--verde-oscuro);
+      transform: translateY(-3px);
+    }
 
-            .card {
-                box-shadow: none;
-                border: 1px solid #d9eaf4;
-                border-top: 4px solid #65bce5;
-            }
+    .social-btn.secondary {
+      background: transparent;
+      border: 1px solid white;
+    }
 
-            .cards {
-                gap: 15px;
-            }
+    .social-btn.secondary:hover {
+      background: white;
+      color: var(--azul);
+    }
 
-            footer {
-                break-inside: avoid;
-            }
+    footer {
+      background: #0d2038;
+      color: #dce5ed;
+      text-align: center;
+      padding: 20px;
+      font-size: 13px;
+    }
 
-            @page {
-                size: A4;
-                margin: 12mm;
-            }
-        }
+    @media (max-width: 800px) {
+      .hero-content {
+        flex-direction: column-reverse;
+        gap: 30px;
+        text-align: center;
+      }
 
-    </style>
+      .hero-text {
+        text-align: center;
+      }
+
+      .hero-buttons {
+        justify-content: center;
+      }
+
+      .profile-photo-container {
+        flex-basis: auto;
+      }
+
+      .profile-photo {
+        max-width: 260px;
+        height: 320px;
+      }
+    }
+
+    @media (max-width: 700px) {
+      header {
+        justify-content: center;
+        text-align: center;
+      }
+
+      nav {
+        justify-content: center;
+        gap: 12px;
+      }
+
+      .hero {
+        padding: 45px 6%;
+      }
+
+      section {
+        padding: 45px 6%;
+      }
+
+      .profile-text {
+        text-align: left;
+        padding: 22px;
+      }
+    }
+
+    @media print {
+      header nav,
+      .download-area,
+      .hero-buttons,
+      .social-buttons {
+        display: none !important;
+      }
+
+      body {
+        background: white;
+        color: #222;
+      }
+
+      header,
+      .hero,
+      .contact-section,
+      footer {
+        print-color-adjust: exact;
+        -webkit-print-color-adjust: exact;
+      }
+
+      section {
+        padding: 25px 5%;
+        max-width: 100%;
+      }
+
+      .card,
+      .experience-item,
+      .profile-text {
+        break-inside: avoid;
+        box-shadow: none;
+      }
+
+      .hero {
+        padding: 35px 5%;
+      }
+
+      .hero-content {
+        flex-direction: row;
+        gap: 25px;
+      }
+
+      .profile-photo {
+        width: 190px;
+        height: 240px;
+      }
+    }
+  </style>
 </head>
 
 <body>
 
-    <!-- ENCABEZADO -->
-    <header>
+  <header>
+    <div class="logo">Portafolio Profesional</div>
 
-        <h2>YARI MILEIDY IDÁRRAGA HIDALGO</h2>
+    <nav>
+      <a href="#perfil">Perfil</a>
+      <a href="#formacion">Formación</a>
+      <a href="#experiencia">Experiencia</a>
+      <a href="#certificados">Certificados</a>
+      <a href="#conocimientos">Conocimientos</a>
+      <a href="#proyectos">Proyectos</a>
+      <a href="#contacto">Contacto</a>
+    </nav>
+  </header>
 
-        <nav>
-            <a href="#inicio">Inicio</a>
-            <a href="#perfil">Mi perfil</a>
-            <a href="#formacion">Formación</a>
-            <a href="#experiencia">Experiencia</a>
-            <a href="#competencias">Competencias</a>
-            <a href="#contacto">Contacto</a>
-        </nav>
+  <div class="hero">
+    <div class="hero-content">
 
-    </header>
-
-    <!-- PRESENTACIÓN -->
-    <section class="hero" id="inicio">
-
-        <div class="hero-content">
-
-            <h1>Hola, soy Yari Mileidy Idárraga Hidalgo</h1>
-
-            <h3>Administradora Tecnológica</h3>
-
-            <p>
-                Estudiante de séptimo semestre de Administración
-                Tecnológica en la Institución Universitaria ITM.
-                Cuento con experiencia en procesos administrativos
-                y contables, y una formación orientada a la gestión
-                empresarial, la tecnología y la innovación.
-            </p>
-
-            <a href="#perfil" class="btn">
-                Conoce más sobre mí
-            </a>
-
-        </div>
-
-    </section>
-
-    <!-- DESCARGA PDF -->
-    <div class="download-section">
-
-        <h2>Mi portafolio profesional</h2>
+      <div class="hero-text">
+        <h1>Yari Mileidy Idárraga Hidalgo</h1>
+        <h2>Administración Tecnológica</h2>
 
         <p>
-            Descarga una versión PDF de mi portafolio
-            para consultar o compartir mi perfil profesional.
+          Estudiante de Administración Tecnológica, Tecnóloga en Análisis de
+          Costos y Presupuestos y Técnica Laboral en Gestión Humana.
+          Profesional en formación con experiencia en procesos administrativos,
+          contables y organizacionales.
         </p>
 
-        <button
-            class="btn download-btn"
-            onclick="descargarPDF()">
+        <div class="hero-buttons">
+          <a href="#contacto" class="btn">Contáctame</a>
+          <a href="#experiencia" class="btn btn-outline">Conoce mi experiencia</a>
+        </div>
+      </div>
 
-            &#128190; Descargar portafolio en PDF
-
-        </button>
+      <div class="profile-photo-container">
+        <img
+          src="foto-perfil.jpeg"
+          alt="Fotografía profesional de Yari Mileidy Idárraga Hidalgo"
+          class="profile-photo"
+        >
+      </div>
 
     </div>
+  </div>
 
-    <!-- PERFIL PROFESIONAL -->
-    <section class="about" id="perfil">
+  <div class="download-area">
+    <button class="btn" onclick="window.print()">
+      Descargar portafolio en PDF
+    </button>
+  </div>
 
-        <h2 class="section-title">Perfil Profesional</h2>
+  <section id="perfil">
+    <h2 class="section-title">Perfil Profesional</h2>
 
-        <div class="about-content">
+    <div class="profile-text">
+      <p>
+        Soy estudiante de séptimo semestre de
+        <strong>Administración Tecnológica en la Institución Universitaria ITM</strong>,
+        <strong>Tecnóloga en Análisis de Costos y Presupuestos</strong> y
+        <strong>Técnica Laboral en Gestión Humana</strong>. Cuento con
+        experiencia laboral como <strong>Auxiliar Administrativa y Contable</strong>,
+        apoyando diferentes procesos administrativos, contables, financieros
+        y organizacionales.
+      </p>
 
-            <p>
-                Es un ciudadano global que cuenta con formación
-                integral, con cualidades éticas y de autonomía para
-                su desarrollo profesional, con capacidad para
-                planear, organizar, dirigir, controlar y evaluar
-                los procesos de gestión del conocimiento, tecnología
-                e innovación, alineándolos con la estrategia para
-                el logro de los objetivos de las organizaciones en
-                las que interviene, lo cual le permite tomar
-                decisiones en contextos complejos, dinámicos e
-                inciertos.
-            </p>
+      <p>
+        Me caracterizo por ser una persona responsable, organizada, autónoma
+        y comprometida con el aprendizaje continuo. Cuento con conocimientos
+        y habilidades para apoyar la planeación, organización, dirección y
+        control de procesos, así como para gestionar información, recursos
+        humanos y financieros, contribuyendo al cumplimiento de los objetivos
+        empresariales.
+      </p>
 
-            <p>
-                Soy estudiante de séptimo semestre de Administración
-                Tecnológica en la Institución Universitaria ITM,
-                con experiencia como Auxiliar Administrativa y
-                Contable. Me interesa fortalecer mis conocimientos
-                y aportar al mejoramiento de los procesos
-                organizacionales.
-            </p>
+      <p>
+        Mi formación académica y experiencia laboral me permiten tener una
+        visión integral de las organizaciones, con conocimientos en gestión
+        administrativa, análisis de costos y presupuestos, gestión humana y
+        procesos organizacionales. Además, tengo especial interés en la
+        gestión del conocimiento, la tecnología y la innovación como
+        herramientas para optimizar procesos y fortalecer la competitividad
+        empresarial.
+      </p>
 
-        </div>
+      <p>
+        Busco continuar fortaleciendo mis competencias profesionales, aportar
+        soluciones y contribuir al mejoramiento continuo y desarrollo
+        estratégico de las organizaciones.
+      </p>
+    </div>
+  </section>
 
-    </section>
+  <section id="formacion">
+    <h2 class="section-title">Formación Académica</h2>
 
-    <!-- FORMACIÓN ACADÉMICA -->
-    <section id="formacion">
+    <div class="cards">
+      <div class="card">
+        <h3>Administración Tecnológica</h3>
+        <p><strong>Universidad:</strong> Institución Universitaria ITM</p>
+        <p><strong>Estado:</strong> Séptimo semestre</p>
+        <p>Actualmente en formación académica.</p>
+      </div>
 
-        <h2 class="section-title">Formación Académica</h2>
+      <div class="card">
+        <h3>Análisis de Costos y Presupuestos</h3>
+        <p><strong>Institución:</strong> Institución Universitaria ITM</p>
+        <p><strong>Título:</strong> Tecnóloga en Análisis de Costos y Presupuestos.</p>
+      </div>
 
-        <div class="cards">
+      <div class="card">
+        <h3>Gestión Humana</h3>
+        <p><strong>Institución:</strong> Politécnico Mayor</p>
+        <p><strong>Título:</strong> Técnica Laboral en Gestión Humana.</p>
+      </div>
+    </div>
+  </section>
 
-            <div class="card">
+  <section id="experiencia">
+    <h2 class="section-title">Experiencia Profesional</h2>
 
-                <h3>Administración Tecnológica</h3>
+    <div class="experience-item">
+      <h3>C+H CORDELES Y HERRAMIENTAS</h3>
+      <h4>Auxiliar Administrativa y Contable</h4>
+      <div class="date">Medellín | Enero 2023 – Actualmente</div>
+      <p>
+        Apoyo en procesos administrativos y contables, registro de
+        transacciones, facturación, gestión de cartera, compras, manejo de
+        inventarios, organización documental y elaboración de informes
+        financieros.
+      </p>
+    </div>
 
-                <p>Institución Universitaria ITM</p>
+    <div class="experience-item">
+      <h3>LEGAL SHAPERS</h3>
+      <h4>Auxiliar Administrativa</h4>
+      <div class="date">Medellín | Marzo 2021 – Julio 2022</div>
+      <p>
+        Soporte y capacitación en plataformas, trámites ante Cámara de
+        Comercio, manejo de personal y seguimiento a proyectos administrativos
+        y operativos.
+      </p>
+    </div>
+  </section>
 
-                <p>Séptimo semestre</p>
+  <section id="certificados">
+    <h2 class="section-title">Certificados y Cursos Cortos</h2>
 
-                <p>Actualmente en formación académica.</p>
-
-            </div>
-
-        </div>
-
-    </section>
-
-    <!-- EXPERIENCIA LABORAL -->
-    <section class="about" id="experiencia">
-
-        <h2 class="section-title">Experiencia Laboral</h2>
-
-        <div class="cards">
-
-            <div class="card">
-
-                <h3>Auxiliar Administrativa</h3>
-
-                <p>
-                    Experiencia en apoyo a procesos administrativos,
-                    gestión documental, organización de información
-                    y actividades de soporte empresarial.
-                </p>
-
-            </div>
-
-            <div class="card">
-
-                <h3>Auxiliar Contable</h3>
-
-                <p>
-                    Experiencia en apoyo a procesos contables,
-                    gestión de documentos, revisión de información
-                    y actividades de apoyo financiero.
-                </p>
-
-            </div>
-
-        </div>
-
-    </section>
-
-    <!-- COMPETENCIAS -->
-    <section id="competencias">
-
-        <h2 class="section-title">Competencias Profesionales</h2>
-
-        <div class="cards">
-
-            <div class="card">
-
-                <h3>Gestión Administrativa</h3>
-
-                <p>
-                    Apoyo y organización de procesos empresariales.
-                </p>
-
-            </div>
-
-            <div class="card">
-
-                <h3>Gestión Contable</h3>
-
-                <p>
-                    Apoyo en actividades y documentación contable.
-                </p>
-
-            </div>
-
-            <div class="card">
-
-                <h3>Gestión Tecnológica</h3>
-
-                <p>
-                    Interés en la tecnología y el mejoramiento
-                    de procesos organizacionales.
-                </p>
-
-            </div>
-
-        </div>
-
-    </section>
-
-    <!-- CONTACTO -->
-    <section class="contact" id="contacto">
-
-        <h2 class="section-title">Contacto</h2>
-
+    <div class="cards">
+      <div class="card">
+        <h3>Diplomado en Gestión Humana</h3>
+        <p><strong>Institución:</strong> Politécnico de Colombia</p>
         <p>
-            ¿Te gustaría conocer más sobre mi perfil profesional?
+          Formación complementaria en procesos relacionados con la gestión
+          del talento humano.
         </p>
+      </div>
 
-        <div class="contact-info">
-
-            <p>
-                Correo electrónico:
-                <a href="mailto:yarihidalgo4@gmail.com">
-                    yarihidalgo4@gmail.com
-                </a>
-            </p>
-
-            <p>
-                Celular:
-                <a href="tel:+573046530275">
-                    304 653 0275
-                </a>
-            </p>
-
-            <p>
-                WhatsApp:
-                <a href="https://wa.me/573046530275"
-                   target="_blank"
-                   rel="noopener noreferrer">
-                    Enviar mensaje
-                </a>
-            </p>
-
-        </div>
-
-    </section>
-
-    <!-- PIE DE PÁGINA -->
-    <footer>
-
+      <div class="card">
+        <h3>Diplomado en Contratación Laboral</h3>
+        <p><strong>Institución:</strong> Politécnico de Colombia</p>
         <p>
-            © 2026 Yari Mileidy Idárraga Hidalgo |
-            Portafolio Profesional
+          Formación complementaria en contratación y procesos laborales.
         </p>
+      </div>
 
+      <div class="card">
+        <h3>Diplomado en Gestión Documental de Archivos</h3>
+        <p><strong>Institución:</strong> Politécnico de Colombia</p>
         <p>
-            Administración Tecnológica - ITM
+          Formación complementaria en organización, administración y gestión
+          documental.
         </p>
+      </div>
+    </div>
+  </section>
 
-    </footer>
+  <section id="conocimientos">
+    <h2 class="section-title">Otros Conocimientos y Competencias</h2>
 
-    <!-- FUNCIÓN DESCARGAR PDF -->
-    <script>
+    <div class="cards">
+      <div class="card">
+        <h3>Administración de Personal</h3>
+        <ul>
+          <li>Administración de personal.</li>
+          <li>Procesos de selección y contratación.</li>
+          <li>Gestión del talento humano.</li>
+        </ul>
+      </div>
 
-        function descargarPDF() {
+      <div class="card">
+        <h3>Gestión Administrativa</h3>
+        <ul>
+          <li>Gestión documental.</li>
+          <li>Procesos administrativos.</li>
+          <li>Organización de información empresarial.</li>
+        </ul>
+      </div>
 
-            document.title =
-                "Portafolio_Yari_Mileidy_Idarraga_Hidalgo";
+      <div class="card">
+        <h3>Gestión Contable y Financiera</h3>
+        <ul>
+          <li>Nómina y seguridad social.</li>
+          <li>Procesos contables.</li>
+          <li>Análisis de costos y presupuestos.</li>
+        </ul>
+      </div>
 
-            window.print();
+      <div class="card">
+        <h3>Competencias Digitales y Manejo de Software</h3>
+        <ul>
+          <li>Herramientas ofimáticas: Microsoft Office.</li>
+          <li>Plataformas administrativas, contables y empresariales: Alegra, World Office y Siigo.</li>
+          <li>Organización y gestión de procesos: Trello, Notion y Bitrix24.</li>
+          <li>Sistemas de nómina: Nominapp.</li>
+          <li>Operadores de información para liquidación y pago de seguridad social: Enlace Operativo, SOI y Aportes en Línea.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
 
-        }
+  <section id="proyectos">
+    <h2 class="section-title">Proyectos</h2>
 
-    </script>
+    <div class="cards">
+      <div class="card">
+        <h3>Proyectos Pasados</h3>
+        <p><strong>Experiencia en procesos administrativos y gestión humana</strong></p>
+        <p>
+          Participación en procesos administrativos y de gestión humana,
+          apoyando actividades de selección y contratación de personal,
+          afiliaciones a seguridad social, gestión documental, nómina y
+          apoyo contable.
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>Proyectos Presentes</h3>
+        <p><strong>Fortalecimiento de competencias profesionales</strong></p>
+        <p>
+          Fortalecimiento de mis competencias profesionales mediante la
+          formación académica en Administración Tecnológica, aplicando
+          conocimientos en procesos administrativos, manejo de software
+          empresarial y gestión del talento humano.
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>Proyectos Futuros</h3>
+        <p><strong>Crecimiento y desarrollo estratégico</strong></p>
+        <p>
+          Continuar mi crecimiento profesional, especializar mis conocimientos
+          en gestión humana y administración, fortalecer mis habilidades
+          tecnológicas y aportar a la optimización de procesos organizacionales
+          mediante herramientas digitales e innovación.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section id="contacto" class="contact-section">
+    <h2 class="section-title">Contacto</h2>
+
+    <p><strong>Correo electrónico:</strong>
+      <a href="mailto:yarihidalgo4@gmail.com">yarihidalgo4@gmail.com</a>
+    </p>
+
+    <p><strong>Celular:</strong>
+      <a href="tel:+573046530275">304 653 0275</a>
+    </p>
+
+    <p><strong>Ubicación:</strong> Medellín, Colombia</p>
+
+    <div class="social-buttons">
+      <a class="social-btn"
+         href="https://wa.me/573046530275"
+         target="_blank"
+         rel="noopener noreferrer">
+        WhatsApp
+      </a>
+
+      <a class="social-btn secondary"
+         href="mailto:yarihidalgo4@gmail.com">
+        Correo electrónico
+      </a>
+
+      <a class="social-btn secondary"
+         href="https://www.instagram.com/yari_ida?jplx=MWV6YnNqOWRld3o0bA=="
+         target="_blank"
+         rel="noopener noreferrer">
+        Instagram
+      </a>
+
+      <a class="social-btn secondary"
+         href="https://www.facebook.com/share/1WDNqw51Gh/"
+         target="_blank"
+         rel="noopener noreferrer">
+        Facebook
+      </a>
+    </div>
+  </section>
+
+  <footer>
+    <p>
+      © 2026 Yari Mileidy Idárraga Hidalgo | Portafolio Profesional
+    </p>
+    <p>Administración Tecnológica | Medellín, Colombia</p>
+  </footer>
 
 </body>
 </html>
